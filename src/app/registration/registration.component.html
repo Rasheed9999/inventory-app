@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Registration</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstname" [(ngModel)]="user.firstname" name="firstname" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastname" [(ngModel)]="user.lastname" name="lastname" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" [(ngModel)]="user.email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" [(ngModel)]="user.password" name="password" required>
+        </div>
+        <!-- <div class="form-group">
+            <label for="department">Role</label>
+            <input type="text" id="role" [(ngModel)]="user.role" name="role" required>
+        </div> -->
+        <div class="form-group">
+            <label for="department">Role</label>
+            <select style="width: 310px" id="role" [(ngModel)]="user.role" name="role" required>
+                <option value="">Select a role</option>
+                <option value="manager">Manager</option>
+                <option value="officer">Officer</option>
+                <option value="planner">Planner</option>
+            </select>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+</div>

@@ -1,0 +1,65 @@
+$primary-color: #f2f2f2;
+$secondary-color: #ddd;
+$highlight-color: #dcdcdc;
+$low-stock-color: #f8480d;
+$normal-stock-color: green;
+
+.inventory-container {
+    margin: 100px;
+}
+.button {
+    background-color: lightblue;
+    height: 30px;
+    text-align: right;
+    right: 40px;
+    position: fixed;
+  }
+
+/* Style the heading */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the table */
+table {
+    align-items: center;
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: 10%;
+
+    /* Style table headers */
+    th {
+        background-color: $primary-color;
+        text-align: left;
+        padding: 10px;
+    }
+
+    /* Style table rows */
+    tr:nth-child(even) {
+        background-color: $primary-color;
+    }
+
+    tr:nth-child(odd) {
+        background-color: white;
+    }
+
+    /* Style table cell padding */
+    td {
+        padding: 10px;
+        border: 1px solid $secondary-color;
+
+        /* Style low stock items */
+        &[style*="color:#f8480d"] {
+            color: $low-stock-color;
+            font-weight: bold;
+        }
+        
+        /* Style hover effect for rows */
+        &:hover {
+            background-color: $highlight-color;
+        }
+    }
+}

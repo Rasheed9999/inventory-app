@@ -1,0 +1,27 @@
+<div class="inventory-container">
+    <button class="button" routerLink="/login">Logout</button>
+    <h1>Inventory Data</h1>
+    <table>
+    <thead>
+    <tr>
+    <th>Item ID</th>
+    <th>Item Name</th>
+    <th>Current Quantity</th>
+    <th>Threshold</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of inventoryData" [style.color]="item.isLowStock ? '#f8480d' : 'green'">
+            <!-- [ngClass]="{'low-stock': item.isLowStock}" -->
+            
+            <!-- Display the item's details -->
+            <td>{{ item.itemID }}</td>
+            <td>{{ item.itemName }}</td>
+            <td>{{ item.quantityAvailable }}</td>
+            <td>{{ item.reorderThreshold }}</td>
+           
+            </tr>
+    </tbody>
+    </table>
+    
+    </div>

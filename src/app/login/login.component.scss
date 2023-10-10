@@ -1,0 +1,63 @@
+/* SCSS for the login component */
+
+// Center the entire container
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center align all content */
+    margin-top: 100px;
+   }
+   h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+   
+   // Form
+   form {
+    display: flex;
+    flex-direction: column;
+   }
+   
+   // Form Group
+   .form-group {
+    margin-bottom: 10px;
+    text-align: left; /* Align labels to the left */
+   }
+   
+   // Label
+   label {
+    font-weight: bold;
+    display: block; /* Display labels as blocks for better formatting */
+   }
+   
+   // Input
+   input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%; /* Expand input to full width */
+   }
+   
+   // Button
+   button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%; /* Expand button to full width */
+   
+   &:hover {
+      background-color: #0056b3;
+    }
+   }
+   p {
+    text-align: center;
+    margin-top: 15px;
+}

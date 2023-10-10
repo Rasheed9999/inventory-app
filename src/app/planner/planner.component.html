@@ -1,0 +1,40 @@
+<div class="container">
+    <button class="button" routerLink="/login">Logout</button>
+    <h1>Waste Reduction Planner</h1>
+    <h2>Historical Data</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Item ID</th>
+                <th>Month</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of historicalData">
+                <td>{{ data.itemId }}</td>
+                <td>{{ data.month }}</td>
+                <td>{{ data.quantity }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+  
+    <h2>Average Inventory Quantity</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Item ID</th>
+                <th>Average Quantity</th>
+                <th>Recommendation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of averageData; let i = index">
+                <td>{{ data.itemId }}</td>
+                <td>{{ data.averageQuantity }}</td>
+                <td>{{ recommendations[i]?.recommendation }}</td> 
+            </tr>
+        </tbody>
+    </table>
+</div>

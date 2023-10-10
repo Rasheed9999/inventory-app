@@ -1,0 +1,53 @@
+<div class="container">
+    <button class="button" routerLink="/login">Logout</button>
+    <h1>Procurement Management</h1>
+    <h2>Inventory Data</h2>
+    <table>
+    <thead>
+    <tr>
+    <th>Item ID</th>
+    <th>Item Name</th>
+    <th>Current Quantity</th>
+    <th>Threshold</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of inventoryData">
+            <!-- [ngClass]="{'low-stock': item.isLowStock}" -->
+            
+            <!-- Display the item's details -->
+            <td>{{ item.itemID }}</td>
+            <td>{{ item.itemName }}</td>
+            <td>{{ item.quantityAvailable }}</td>
+            <td>{{ item.reorderThreshold }}</td>
+           
+            </tr>
+    </tbody>
+    </table>
+    <h2>Low-Stock Items</h2>
+    <table>
+    <thead>
+    <tr>
+    <th>Item ID</th>
+    <th>Item Name</th>
+    <th>Current Quantity</th>
+    <th>Predefined Threshold</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of lowStockItems">
+    <td>{{ item.itemID }}</td>
+    <td>{{ item.itemName }}</td>
+    <td>{{ item.quantityAvailable }}</td>
+    <td>{{ item.reorderThreshold }}</td>
+    </tr>
+    </tbody>
+    </table>
+    <label for="itemId">Item ID:</label>
+    <input type="number" id="itemId" [(ngModel)]="itemId" />
+    <br />
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" [(ngModel)]="quantity" />
+    <br />
+    <button (click)="createPurchaseOrder()">Create Purchase Order</button>
+    </div>
